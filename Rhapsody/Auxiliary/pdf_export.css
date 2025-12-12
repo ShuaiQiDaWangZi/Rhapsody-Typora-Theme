@@ -279,3 +279,28 @@
     fill: none !important;
   }
 }
+
+/* ========================================================================== */
+/* REGION D — PRINT PATCH: BODY PARAGRAPHS                                    */
+/* Scope: 仅限打印 / PDF 导出时 #write 下的正文段落 <p>                        */
+/* Function: 关闭段落 text-shadow 等文字特效，避免 PDF 中复制文字重复          */
+/* Adjustable Params: 是否一并关闭 text-stroke / filter 等潜在多重绘制效果      */
+/* Compatibility: Typora 导出 PDF / Electron 打印 / 现代浏览器                 */
+/* Notes:                                                                      */
+/* - 只作用于打印上下文，屏幕态视觉效果完全不变                               */
+/* - 如后续为段落增加更多描边/滤镜，可在此区域一并兜底关闭                     */
+/* ========================================================================== */
+
+@media print {
+  #write p {
+    /* 关键：关闭 shadow，防止 PDF 中多次文字绘制 → 复制翻倍 */
+    text-shadow: none !important;
+
+    /* 预防将来给正文加描边/滤镜时，同样导致重复绘制 */
+    -webkit-text-stroke: 0 !important;
+            text-stroke: 0 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+  }
+}
+/* =============================== END OF PACKAGE ============================ */
