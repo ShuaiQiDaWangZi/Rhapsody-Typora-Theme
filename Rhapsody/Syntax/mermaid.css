@@ -105,6 +105,17 @@
   stroke: var(--spring-accent) !important;
   stroke-width: 1.25px;
 }
+/* 修正：连线类图元不应有填充，避免折线被渲染成“多边形面” */
+#write pre[lang="mermaid"] .mermaid-svg .edgePath .path,
+#write pre[lang="mermaid"] .mermaid-svg .flowchart-link,
+#write pre[lang="mermaid"] .mermaid-svg .messageLine0,
+#write pre[lang="mermaid"] .mermaid-svg .messageLine1,
+#write pre[lang="mermaid"] .mermaid-svg .lifeline,
+#write pre[lang="mermaid"] .mermaid-svg .loopLine,
+#write pre[lang="mermaid"] .mermaid-svg polyline,
+#write pre[lang="mermaid"] .mermaid-svg line {
+  fill: none !important;
+}
 #write pre[lang="mermaid"] .mermaid-svg .arrowheadPath,
 #write pre[lang="mermaid"] .mermaid-svg .marker {
   fill: var(--spring-accent) !important;

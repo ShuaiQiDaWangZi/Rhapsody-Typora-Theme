@@ -132,16 +132,21 @@
   pointer-events:none;
 }
 #write .footnotes .md-def-name {
-  display:inline-block;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   background:var(--fn-num-bg);
   color:var(--fn-num-fg);
   font-weight:bold;
   font-size:var(--fn-num-fs);
-  width:var(--fn-num-box);
+  min-width:var(--fn-num-box);
   height:var(--fn-num-box);
+  padding:0 .36em;
   text-align:center;
-  line-height:var(--fn-num-box);
-  border-radius:50%;
+  line-height:1;
+  border-radius:999px;
+  box-sizing:border-box;
+  white-space:nowrap;
   flex-shrink:0;
   box-shadow:var(--fn-num-bs);
 }
