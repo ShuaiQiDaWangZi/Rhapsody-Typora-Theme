@@ -570,6 +570,17 @@ Rhapsody 并不仅是一份视觉皮肤，
 
 > “万象初开，光与秩序交织的第一章。”
 
+### v1.0.1 — Bugfix Release
+
+- 修复脚注编号显示：`Rhapsody/Syntax/footnote.css`
+  - 文末脚注编号由固定圆点改为“最小圆点 + 自适应胶囊”，两位数及以上（如 10、30）不再被截断。
+- 修复 Mermaid 连线渲染：`Rhapsody/Syntax/mermaid.css`
+  - 为连线类图元强制 `fill: none`，避免部分图中折线被误渲染成“多边形面”。
+- 稳定性维护
+  - 提升长文档与复杂图表场景下的视觉一致性。
+
+------
+
 ### v1.0.0 — Initial Release
 
 **Rhapsody Typora Theme** 正式发布 🎉

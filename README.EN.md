@@ -41,6 +41,7 @@
   - [✒️ Author & Project Info](#️-author--project-info)
   - [🪶 To Users](#-to-users)
 - [🕓 Changelog](#-changelog)
+  - [v1.0.1 – Bugfix Release](#v101--bugfix-release)
   - [v1.0.0 – Initial Release](#v100--initial-release)
 - [🥚 Easter Eggs](#-easter-eggs)
 - [💖 Support & Sponsor](#-support--sponsor)
@@ -521,6 +522,17 @@ Rhapsody is not only a skin – it’s a **writing experiment about order, light
 ------
 
 ## 🕓 Changelog
+
+### v1.0.1 — Bugfix Release
+
+- fixed footnote marker truncation in `Rhapsody/Syntax/footnote.css`
+  - multi-digit markers (e.g. 10, 30) now remain fully visible
+- fixed Mermaid edge rendering artifacts in `Rhapsody/Syntax/mermaid.css`
+  - enforced `fill: none` on line-like elements to prevent polygon-like fill artifacts
+- maintenance update
+  - improved visual consistency for long docs and complex diagrams
+
+------
 
 ### v1.0.0 — Initial Release 
 
